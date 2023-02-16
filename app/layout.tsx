@@ -1,4 +1,9 @@
 import './globals.css'
+import {Inter} from "@next/font/google"
+
+
+const inter = Inter({ subsets: ['latin'] })
+
 
 export default function RootLayout({
   children,
@@ -6,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={"bg-[#101010] py-10 px-[7%]"}>
+    <html lang="en" className={`bg-[#101010] py-16 px-[7%] gradient-1 ${inter.className} h-screen`}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
