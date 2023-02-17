@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.gradient-1 {
+/* Gradients */
+.gradient {
   background-image: radial-gradient(
-    circle at center top,
-    rgba(113, 113, 113, 0.2) 0%,
-    rgba(16, 16, 16, 0.1) 40%
-  );
+      circle at center top,
+      rgba(113, 113, 113, 0.2) 0%,
+      rgba(16, 16, 16, 0.1) 40%
+    ),
+    radial-gradient(
+      circle at left 60%,
+      rgba(113, 113, 113, 0.2) 0%,
+      rgba(16, 16, 16, 0.1) 50%
+    );
+}
+
+/* Images */
+.profile {
+  box-shadow: 15px 10px 2px 5px rgba(124, 235, 255, 0.3);
 }

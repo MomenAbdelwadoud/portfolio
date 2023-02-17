@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <header className='py-20'>
     <p className={'text-primary font-semibold text-sm mb-5'}>{"<>"}</p>
-    <p className='text-sm text-[#b1f3ff]'>Hi, my name is</p>
-    <h1 className='text-2xl tracking-wide font-semibold'>MOMEN ABD-ELWADOUD</h1>
+    <p className='text-sm text-secondary'>Hi, my name is</p>
+    <h1 className='text-2xl tracking-wide font-medium'>MOMEN ABD-ELWADOUD</h1>
     <h2 className='font-light flex gap-2 text-xl'>Iam a <span className='text-white flex flex-col'><p className='font-bold'>Frontend Developer</p><Image
     src={'/line.svg'}
     alt="line"
