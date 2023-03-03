@@ -1,0 +1,11 @@
+{
+    
+    "rock": {
+        "title": "Rock Paper Scissors",
+        "tools": ["ReactJS","TailwindCSS"],
+        "description": "A simple responsive solution to the Frontend mentor challenge, Rock Paper Scissors web game against PC",
+        "imgs": ["rock1.jpg", "rock2.jpg"],
+        "github": "https://github.com/MomenAbdelwadoud/Rock-Paper-Scissors-Reactjs",
+        "live": "https://rock-paper-scissors-reactjs.pages.dev/"
+    }
+}

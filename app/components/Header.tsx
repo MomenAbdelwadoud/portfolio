@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Button from './Button'
+import Line from './svg/line'
 
 const Header = () => {
   return (
@@ -8,13 +9,9 @@ const Header = () => {
     <p className={'text-primary font-semibold text-sm mb-5'}>{"<>"}</p>
     <p className='text-sm text-secondary'>Hi, my name is</p>
     <h1 className='text-2xl tracking-wide font-medium'>MOMEN ABD-ELWADOUD</h1>
-    <h2 className='font-light flex gap-2 text-xl'>Iam a <span className='text-white flex flex-col'><p className='font-bold'>Frontend Developer</p><Image
-    src={'/line.svg'}
-    alt="line"
-    width={80}
-    height={10}
-    className=""
-    ></Image></span></h2>        
+    <h2 className='font-light flex gap-2 text-xl'>Iam a <span className='text-white flex flex-col'><p className='font-bold'>Frontend Developer</p>
+    <Line></Line>
+    </span></h2>        
     <p className={'text-primary font-semibold text-sm mt-3 mb-5'}>{"</>"}</p>
     <Button></Button>
     <Image

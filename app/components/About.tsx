@@ -9,9 +9,9 @@ const About = () => {
             <h1 className='text-2xl tracking-wide font-medium mb-2'>MOMEN ABD-ELWADOUD</h1>
             <p className='text-sm py-2'>Iam a self-taught front-end developer and an undergraduate student. I started my coding journey from years and was jumping from field to field until I picked front-end development a short time ago.</p>
             <p className='text-primary py-2'>{"{"}</p>
-            <p><b className='font-medium'>Frameworks: </b>[ReactJS, NextJS],</p>
-            <p><b className='font-medium'>CSS: </b>[TailwindCSS, Material UI],</p>
-            <p><b className='font-medium'>Animations: </b>[GSAP, Framer Motion],</p>
+            <p className='text-sm'><b className='font-medium'>Frameworks: </b>[ReactJS, NextJS],</p>
+            <p className='text-sm'><b className='font-medium'>CSS: </b>[TailwindCSS, Material UI],</p>
+            <p className='text-sm'><b className='font-medium'>Animations: </b>[GSAP, Framer Motion],</p>
             <p className='text-primary py-2'>{"}"}</p>
         </div>
      
@@ -23,7 +23,7 @@ const About = () => {
                 height={220}
                 className="rounded-xl grayscale hover:grayscale-0 transition-all duration-500 object-cover h-[220px]"
                 ></Image>
-                <div className='absolute rounded-lg -z-10 left-9 top-7 h-full w-full border-[1px] border-primary'></div>
+                <div className='absolute rounded-lg -z-10 left-9 top-7 h-full w-full border-[1px] border-secondary'></div>
             </div>
 
     </section>

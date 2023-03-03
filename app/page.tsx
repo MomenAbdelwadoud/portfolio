@@ -2,6 +2,7 @@ import React from 'react'
 import About from './components/About'
 import Header from './components/Header'
 import Nav from './components/Nav'
+import Projects from './components/Projects'
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
     <Nav></Nav>
     <Header></Header>
     <About></About>
+    <Projects></Projects>
     </div>
   )
 }
