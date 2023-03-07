@@ -10,13 +10,30 @@
       rgba(16, 16, 16, 0.1) 40%
     ),
     radial-gradient(
-      circle at left 60%,
+      circle at left 50%,
       rgba(113, 113, 113, 0.2) 0%,
-      rgba(16, 16, 16, 0.1) 50%
+      rgba(16, 16, 16, 0.1) 40%
+    ),
+    radial-gradient(
+      circle at right 80%,
+      rgba(113, 113, 113, 0.2) 0%,
+      rgba(16, 16, 16, 0.1) 40%
     );
 }
 
 /* Images */
 .profile {
   box-shadow: 15px 10px 2px 5px rgba(124, 235, 255, 0.3);
+}
+
+/* Tabbed Container */
+[tabIndex="-1"] {
+  color: #aaa !important;
+}
+.Mui-selected {
+  font-weight: 600;
+}
+
+.MuiTab-root {
+  text-transform: unset !important;
 }

@@ -7,7 +7,7 @@ import ArrowRight from "./svg/arrow-right"
 const Projects = () => {  
   return (
     <div className='min-h-screen flex flex-col justify-center'>
-      <h6 className='text-[22px] text-secondary uppercase mb-6'>Projects</h6>
+      <h6 className='text-[22px] text-secondary uppercase mb-6 font-medium'>Projects</h6>
       <div className='flex items-center gap-1'>
         <ArrowRight transform="rotate(180,0,-10)" color="#777"></ArrowRight>
         {
