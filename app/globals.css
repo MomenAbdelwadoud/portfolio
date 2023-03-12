@@ -5,20 +5,10 @@
 /* Gradients */
 .gradient {
   background-image: radial-gradient(
-      circle at center top,
-      rgba(113, 113, 113, 0.2) 0%,
-      rgba(16, 16, 16, 0.1) 40%
-    ),
-    radial-gradient(
-      circle at left 50%,
-      rgba(113, 113, 113, 0.2) 0%,
-      rgba(16, 16, 16, 0.1) 40%
-    ),
-    radial-gradient(
-      circle at right 80%,
-      rgba(113, 113, 113, 0.2) 0%,
-      rgba(16, 16, 16, 0.1) 40%
-    );
+    circle at center top,
+    rgba(113, 113, 113, 0.25) 0%,
+    #101010 20%
+  );
 }
 
 /* Images */

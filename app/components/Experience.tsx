@@ -40,7 +40,7 @@ function TabPanel(props: TabPanelProps) {
       >
         {value === index && (
           <Box className="py-6 px-4">
-            <p>{children}</p>
+            <div>{children}</div>
           </Box>
         )}
       </div>
