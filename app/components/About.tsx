@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <section className='mt-14 md:mt-24 py-10 font-light flex flex-wrap gap-4 items-center justify-center md:justify-between'>
+    <section id='about' className='mt-14 md:mt-24 py-10 font-light flex flex-wrap gap-4 items-center justify-center md:justify-between'>
         <div>
-            <h6 className='text-sm text-secondary -mb-1'>ABOUT</h6>
-            <h3 className='text-2xl tracking-wide font-medium mb-2'>MOMEN ABD-ELWADOUD</h3>
-            <p className='text-sm py-2 max-w-xs'>Iam a self-taught front-end developer and an undergraduate student. I started my coding journey from years and was jumping from field to field until I picked front-end development a short time ago.</p>
+            <h6 className='text-sm text-secondary -mb-1 lg:text-base'>ABOUT</h6>
+            <h3 className='text-2xl tracking-wide font-medium mb-2 lg:text-3xl'>MOMEN ABD-ELWADOUD</h3>
+            <p className='text-sm py-2 max-w-xs lg:text-base lg:max-w-md'>Iam a self-taught front-end developer and an undergraduate student. I started my coding journey from years and was jumping from field to field until I picked front-end development a short time ago.</p>
             <p className='text-primary py-2'>{"{"}</p>
             <p className='text-sm'><b className='font-medium'>Frameworks: </b>[ReactJS, NextJS],</p>
             <p className='text-sm'><b className='font-medium'>CSS: </b>[TailwindCSS, Material UI],</p>
@@ -15,7 +15,7 @@ const About = () => {
             <p className='text-primary py-2'>{"}"}</p>
         </div>
      
-            <div className='profile rounded-lg relative -ml-8 mt-4'>
+            <div className='profile rounded-lg relative -ml-8 mt-4 lg:scale-105'>
                 <Image
                 src="/profile.jpg"
                 alt="Profile Image"

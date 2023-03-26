@@ -10,6 +10,15 @@
     #101010 20%
   );
 }
+@media (min-width: 1024px) {
+  .gradient {
+    background-image: radial-gradient(
+      circle at center top,
+      rgba(113, 113, 113, 0.25) 0%,
+      #101010 30%
+    );
+  }
+}
 
 /* Images */
 .profile {

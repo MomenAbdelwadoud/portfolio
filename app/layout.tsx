@@ -17,7 +17,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className='py-16 px-[7%] gradient md:px-[10%]'>{children}</body>
+      <body className='py-16 px-[7%] gradient md:px-[10%] lg:px-[20%]'>{children}</body>
     </html>
   )
 }

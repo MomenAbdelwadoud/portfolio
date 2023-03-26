@@ -8,7 +8,7 @@ const SvgComponent = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
-    className="md:scale-150"
+    className="md:scale-150 lg:scale-x-[200%] lg:scale-y-[200%]"
   >
     <path
       transform="rotate(-35.5 0 58.07)"

@@ -49,7 +49,7 @@ function TabPanel(props: TabPanelProps) {
   }
 
 const Experience = () => {
-    const isVertical = useMediaQuery(theme.breakpoints.up('md'));
+    const isPc = useMediaQuery(theme.breakpoints.up('md'));
     const isTablet = useMediaQuery(theme.breakpoints.up('sm'));
     const [value, setValue] = React.useState(0);
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -57,8 +57,8 @@ const Experience = () => {
     };
   return (
     <ThemeProvider theme={theme}>
-    <div className=''>
-        <h6 className='text-[22px] text-secondary uppercase mb-6 font-medium'>Job Experience</h6>
+    <div className='lg:mt-6' id='job'>
+        <h6 className='text-[22px] text-secondary uppercase mb-6 font-medium lg:mb-10'>Job Experience</h6>
         <div className='lg:flex '>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Tabs
@@ -68,27 +68,28 @@ const Experience = () => {
               textColor='secondary'
               aria-label="Job experience tabs"
               variant='fullWidth'
-              orientation={isVertical ? 'vertical' : 'horizontal'}
+              orientation={isPc ? 'vertical' : 'horizontal'}
+              
               >
                   <Tab label="Bloom (YC W22)"  className='lg:text-left'/>
                   <Tab label="...Your company?" disabled className='lg:text-left'/>
               </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-              <div className='flex justify-between pr-4 items-center'>
+              <div className='flex justify-between pr-4 items-center lg:-mt-8 lg:ml-8'>
                   <div>
-                      <h4 className='font-semibold text-lg md:text-2xl text-white tracking-wider'>Bloom (YC W22)</h4>
-                      <p className='text-gray-300 text-xs md:text-base tracking-wider'>Intern</p>
+                      <h4 className='font-semibold text-lg md:text-2xl lg:text-3xl text-white tracking-widest'>Bloom (YC W22)</h4>
+                      <p className='text-gray-300 text-xs md:text-base tracking-widest lg:text-lg'>Intern</p>
                   </div>
                   <Image
                   src={"/Bloom.jpg"}
-                  height={isTablet ? "60" : "40"}
-                  width={isTablet ? "60" : "40"}
+                  height={isTablet ? "60" : isPc ? "80" : "40"}
+                  width={isTablet ? "60" : isPc ? "80" : "40"}
                   alt={`Bloom (YC W22`}
                   className="rounded-lg opacity-90"
                   ></Image>
               </div>
-              <ul className='text-xs md:text-base space-y-2 md:space-y-6 py-8 px-4 md:max-w-[80%]'>
+              <ul className='text-xs md:text-base space-y-2 md:space-y-6 py-8 lg:py-10 px-4 md:max-w-[80%] lg:ml-8'>
                   <li className='tracking-wider list-disc leading-5'>Developed in-house admin dashboards/tools that uses different APIs.</li>
                   <li className='tracking-wider list-disc leading-5'>Designed and built the company's Help Center.</li>
                   <li className='tracking-wider list-disc leading-5'>Worked customer support self-help strategies.</li>
