@@ -4,7 +4,7 @@ import Sidebar from './Sidebar'
 
 
 export default function Nav(){
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     const asideHandler = () => setOpen(!open)
     return (
     <nav >
@@ -17,6 +17,23 @@ export default function Nav(){
                 <Sidebar asideHandler={asideHandler}></Sidebar>
                      </aside>
          </div>
+         <ul className='text-gray-400 text-md font-medium gap-10 hidden md:flex'>
+        <a href="#home" className='hover:text-primary transition-colors'>
+          <li>Home</li>
+        </a>
+        <a href="#about" className='hover:text-primary transition-colors'>
+          <li>About</li>
+        </a>
+        <a href="#projects" className='hover:text-primary transition-colors'>
+          <li>Projects</li>
+        </a>
+        <a href="#job" className='hover:text-primary transition-colors'>
+          <li>Job Experience</li>
+        </a>
+        <a href="#contact" className='hover:text-primary transition-colors'>
+          <li>Contact</li>
+        </a>
+      </ul>
     </nav>
     )
 }

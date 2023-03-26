@@ -12,6 +12,9 @@ module.exports = {
         primary: "#7CEBFF",
         secondary: "#B5F4FF",
       },
+      animation: {
+        spin: "spin 8s linear infinite",
+      },
     },
   },
   plugins: [],
