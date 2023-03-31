@@ -1,13 +1,13 @@
 'use client'
 import React, {useState} from 'react'
 import Sidebar from './Sidebar'
-
+import {motion} from 'framer-motion'
 
 export default function Nav(){
     const [open, setOpen] = useState(false)
     const asideHandler = () => setOpen(!open)
     return (
-    <nav >
+    <nav>
          <div className="md:hidden">
              <button className={"flex flex-col fixed gap-1 top-20 right-12 z-30"} onClick={asideHandler}>
                 <div className={"h-1 w-6 bg-gray-300 transition-transform " + (open ? " rotate-45 -mb-1" : "rotate-0 mb-0")}></div>
@@ -17,7 +17,10 @@ export default function Nav(){
                 <Sidebar asideHandler={asideHandler}></Sidebar>
                      </aside>
          </div>
-         <ul className='text-gray-400 text-md font-medium gap-10 hidden md:flex'>
+         <motion.ul
+          initial={{y:-30,opacity:0}}
+          animate={{y:0,opacity:1}}
+          className='text-gray-400 text-md font-medium gap-10 hidden md:flex'>
         <a href="#home" className='hover:text-primary transition-colors'>
           <li>Home</li>
         </a>
@@ -33,7 +36,7 @@ export default function Nav(){
         <a href="#contact" className='hover:text-primary transition-colors'>
           <li>Contact</li>
         </a>
-      </ul>
+      </motion.ul>
     </nav>
     )
 }

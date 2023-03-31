@@ -36,3 +36,9 @@
 .MuiTab-root {
   text-transform: unset !important;
 }
+
+@media (min-width: 1024px) {
+  .MuiTabs-flexContainer {
+    flex-direction: column;
+  }
+}

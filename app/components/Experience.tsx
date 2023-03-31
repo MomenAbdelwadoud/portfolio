@@ -6,6 +6,8 @@ import Tab from '@mui/material/Tab';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Image from 'next/image';
+import {motion} from 'framer-motion'
+
 
 const theme = createTheme({
     palette: {
@@ -57,7 +59,12 @@ const Experience = () => {
     };
   return (
     <ThemeProvider theme={theme}>
-    <div className='lg:mt-6' id='job'>
+    <motion.section
+      initial= {{y:30, opacity:0}}
+      whileInView= {{y:0, opacity:1}}
+    viewport={isPc ? {margin: "0px 0px 0px -400px"}: {margin:"-100px"}}
+      transition={{delay:0.3}}
+     className='lg:mt-6' id='job'>
         <h6 className='text-[22px] text-secondary uppercase mb-6 font-medium lg:mb-10'>Job Experience</h6>
         <div className='lg:flex '>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -69,7 +76,7 @@ const Experience = () => {
               aria-label="Job experience tabs"
               variant='fullWidth'
               orientation={isPc ? 'vertical' : 'horizontal'}
-              
+              className="md:flex-col"
               >
                   <Tab label="Bloom (YC W22)"  className='lg:text-left'/>
                   <Tab label="...Your company?" disabled className='lg:text-left'/>
@@ -96,7 +103,7 @@ const Experience = () => {
               </ul>
           </TabPanel>
         </div>
-    </div>
+    </motion.section>
     </ThemeProvider>
   )
 }

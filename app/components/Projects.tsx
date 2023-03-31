@@ -1,9 +1,15 @@
+'use client'
 import React from 'react'
 import ProjectsList from "../../utils/projects.json"
 import ArrowRight from "./svg/arrow-right"
 import Image from 'next/image'
 import Github from './svg/github'
 import Live from './svg/live'
+import {motion} from 'framer-motion'
+import { useMediaQuery } from '@mui/material'
+
+
+
 
 type ProjectTypes = {
   title:string,
@@ -15,6 +21,7 @@ type ProjectTypes = {
 }
 
 const Project = ({title,tools,description,imgs,github,live}:ProjectTypes) => {
+
 return (
   <div className='px-1'> 
     <div className='flex flex-col md:flex-row md:items-start justify-between'>
@@ -61,8 +68,14 @@ return (
 )
 }
 const Projects = () => {  
+  const notPc = useMediaQuery("(max-width: 640px)")
   return (
-    <div className='min-h-screen md:min-h-[60vh] lg:min-h-[70vh] flex flex-col justify-center' id='projects'>
+    <motion.section
+      initial= {{y:30, opacity:0}}
+      whileInView= {{y:0, opacity:1}}
+      viewport={!notPc ? {margin: "-350px"}: {margin:"-100px"}}
+      transition={{delay:0.1}}
+     className='min-h-screen md:min-h-[60vh] lg:min-h-[80vh] flex flex-col justify-center' id='projects'>
       <h6 className='text-[22px] text-secondary uppercase mb-6 font-medium lg:mb-8'>Projects</h6>
       <div className='flex items-center gap-1 md:justify-between lg:px-4 lg:gap-3'>
         <ArrowRight transform="rotate(180,0,-10)" color="#777"></ArrowRight>
@@ -74,7 +87,7 @@ const Projects = () => {
         }
         <ArrowRight color="#fff"></ArrowRight>
       </div>
-    </div>
+    </motion.section>
   )
 }
 

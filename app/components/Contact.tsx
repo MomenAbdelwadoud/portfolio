@@ -1,11 +1,21 @@
+'use client'
 import React from 'react'
 import Github from './svg/github'
 import Linkedin from './svg/linkedin'
 import Plane from "./svg/plane"
+import {motion} from 'framer-motion'
+import { useMediaQuery } from '@mui/material'
 
 const Contact = () => {
+  const notPc = useMediaQuery("(max-width: 640px)")
+
   return (
-    <div className='min-h-[50vh] mt-24 md:flex md:justify-between md:items-center' id='contact'>
+    <motion.section
+    initial= {{y:30, opacity:0}}
+    whileInView= {{y:0, opacity:1}}
+    viewport={!notPc ? {margin: "-300px"}: {margin:"-100px"}}
+    transition={{delay:0.1}}
+     className='min-h-[50vh] mt-24 md:flex md:justify-between md:items-center' id='contact'>
         <div className='basis-1/2'>
           <h6 className='text-[22px] text-secondary uppercase font-medium'>Contact</h6>
           <h3 className='text-2xl tracking-wide font-medium mb-4 lg:text-3xl'>MOMEN ABD-ELWADOUD</h3>
@@ -21,7 +31,7 @@ const Contact = () => {
           </div>
         </div>
         <Plane></Plane>
-    </div>
+    </motion.section>
   )
 }
 
