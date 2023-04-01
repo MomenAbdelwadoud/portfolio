@@ -1,15 +1,13 @@
 'use client'
-import React from 'react'
+import React, {useState} from 'react'
 import ProjectsList from "../../utils/projects.json"
-import ArrowRight from "./svg/arrow-right"
+// import ArrowRight from "./svg/arrow-right"
 import Image from 'next/image'
 import Github from './svg/github'
 import Live from './svg/live'
 import {motion} from 'framer-motion'
 import { useMediaQuery } from '@mui/material'
-
-
-
+import Carousel from 'react-material-ui-carousel'
 
 type ProjectTypes = {
   title:string,
@@ -17,20 +15,19 @@ type ProjectTypes = {
   description:string,
   imgs:Array<string>,
   github?:string,
-  live?:string
+  live?:string,
 }
 
 const Project = ({title,tools,description,imgs,github,live}:ProjectTypes) => {
-
 return (
-  <div className='px-1'> 
+  <div className={'px-1'} > 
     <div className='flex flex-col md:flex-row md:items-start justify-between'>
       <div className=' md:w-[60%] md:-mr-20 md:z-30'>
           <h4 className='text-white uppercase font-medium text-lg lg:text-xl xl:text-2xl'>{title}</h4>
-          <p className='text-secondary text-sm lg:text-base'>
+          <p className='text-secondary text-sm lg:text-lg'>
               {tools.join(" + ")}
           </p>
-          <p className='w-full py-4 px-3 md:px-5 md:py-6 text-xs text-black tracking-widest bg-secondary rounded-xl mt-3 mb-4 lg:text-sm'>
+          <p className='w-full py-4 px-3 md:px-5 md:py-6 text-xs text-black tracking-widest bg-secondary rounded-xl mt-3 mb-4 lg:text-base'>
               {description}
           </p>
       </div>
@@ -56,7 +53,7 @@ return (
         </div>
       </div>
     </div>
-    <div className='flex gap-4 text-gray-400 mt-2 md:-mt-4 lg:mt-0'>
+    <div className='flex gap-4 text-gray-400 mt-2 md:-mt-2 lg:mt-2'>
         <a href={github}  target="_blank" rel='noreferrer'>
         { github?.length !== undefined && <Github viewBox="0 0 50 50"></Github>}
         </a>
@@ -69,6 +66,7 @@ return (
 }
 const Projects = () => {  
   const notPc = useMediaQuery("(max-width: 640px)")
+  const [index, setIndex] = useState("100px")
   return (
     <motion.section
       initial= {{y:30, opacity:0}}
@@ -78,14 +76,19 @@ const Projects = () => {
      className='min-h-screen md:min-h-[60vh] lg:min-h-[80vh] flex flex-col justify-center' id='projects'>
       <h6 className='text-[22px] text-secondary uppercase mb-6 font-medium lg:mb-8'>Projects</h6>
       <div className='flex items-center gap-1 md:justify-between lg:px-4 lg:gap-3'>
-        <ArrowRight transform="rotate(180,0,-10)" color="#777"></ArrowRight>
-        {
-          Object.keys(ProjectsList).map(project => {
-            let cur_project = (ProjectsList as any)[project]
-            return <Project {...cur_project} key={cur_project.id}></Project>
-          })
-        }
-        <ArrowRight color="#fff"></ArrowRight>
+        {/* <ArrowRight transform="rotate(180,0,-10)" color="#777"></ArrowRight> */}
+        <Carousel
+        indicators={false}
+        navButtonsAlwaysVisible
+         className={`min-w-full sm:px-12 lg:px-20`}>
+          {
+            Object.keys(ProjectsList).map(project => {
+              let cur_project = (ProjectsList as any)[project]
+              return <Project {...cur_project} key={cur_project.id}></Project>
+            })
+          }
+        </Carousel>
+        {/* <ArrowRight color="#fff"></ArrowRight> */}
       </div>
     </motion.section>
   )

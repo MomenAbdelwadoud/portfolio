@@ -98,8 +98,8 @@ const Experience = () => {
               </div>
               <ul className='text-xs md:text-base space-y-2 md:space-y-6 py-8 lg:py-10 px-4 md:max-w-[80%] lg:ml-8'>
                   <li className='tracking-wider list-disc leading-5'>Developed in-house admin dashboards/tools that uses different APIs.</li>
-                  <li className='tracking-wider list-disc leading-5'>Designed and built the company's Help Center.</li>
-                  <li className='tracking-wider list-disc leading-5'>Worked customer support self-help strategies.</li>
+                  <li className='tracking-wider list-disc leading-5'>Designed and built the company{"'"}s Help Center.</li>
+                  <li className='tracking-wider list-disc leading-5'>Worked on customer support self-help strategies.</li>
               </ul>
           </TabPanel>
         </div>

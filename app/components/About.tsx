@@ -18,7 +18,7 @@ const About = () => {
         <div>
             <h6 className='text-sm text-secondary -mb-1 lg:text-base'>ABOUT</h6>
             <h3 className='text-2xl tracking-wide font-medium mb-2 lg:text-3xl'>MOMEN ABD-ELWADOUD</h3>
-            <p className='text-sm py-2 max-w-xs lg:text-base lg:max-w-md'>Iam a self-taught front-end developer and an undergraduate student. I started my coding journey from years and was jumping from field to field until I picked front-end development a short time ago.</p>
+            <p className='text-sm py-2 max-w-xs lg:text-base lg:max-w-md'>Iam a self-taught front-end developer and an undergraduate student. I build beautiful, responsive, and user-friendly websites.</p>
             <p className='text-primary py-2'>{"{"}</p>
             <p className='text-sm'><b className='font-medium'>Frameworks: </b>[ReactJS, NextJS],</p>
             <p className='text-sm'><b className='font-medium'>CSS: </b>[TailwindCSS, Material UI],</p>

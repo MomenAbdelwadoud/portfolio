@@ -2,10 +2,8 @@
 import React from 'react'
 import Github from './svg/github'
 import Linkedin from './svg/linkedin'
-import Plane from "./svg/plane"
 import {motion} from 'framer-motion'
 import { useMediaQuery } from '@mui/material'
-import Email from "./svg/email"
 
 const Contact = () => {
   const notPc = useMediaQuery("(max-width: 640px)")
