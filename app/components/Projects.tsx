@@ -20,7 +20,7 @@ type ProjectTypes = {
 
 const Project = ({title,tools,description,imgs,github,live}:ProjectTypes) => {
 return (
-  <div className={'px-1'} > 
+  <div className={'px-1 min-h-fit'} > 
     <div className='flex flex-col md:flex-row md:items-start justify-between'>
       <div className=' md:w-[60%] md:-mr-20 md:z-30'>
           <h4 className='text-white uppercase font-medium text-lg lg:text-xl xl:text-2xl'>{title}</h4>
@@ -42,7 +42,7 @@ return (
             className='object-cover border-[1px] rounded-xl opacity-90 border-gray-400'
             ></Image>
         </div>
-        <div className='absolute top-1/3 left-1/4 lg:left-1/3'>
+        <div className='absolute top-1/3 left-1/4 lg:left-1/3 '>
             <Image
             src={`/projects/${imgs[1]}`}
             width={200}
@@ -53,13 +53,13 @@ return (
         </div>
       </div>
     </div>
-    <div className='flex gap-4 text-gray-400 mt-2 md:-mt-2 lg:mt-2'>
+    <div className='flex gap-4 text-gray-400 mt-5 md:-mt-2 lg:mt-2 justify-end mr-14 sm:mr-0 sm:justify-start'>
         <a href={github}  target="_blank" rel='noreferrer'>
         { github?.length !== undefined && <Github viewBox="0 0 50 50"></Github>}
         </a>
-        <a href={live}  target="_blank" rel='noreferrer'>
-        { live?.length !== undefined && <Live></Live>}
-        </a>
+        { live?.length !== undefined && <a href={live}  target="_blank" rel='noreferrer'>
+       <Live></Live>
+        </a>}
     </div>
   </div>
 )
@@ -80,6 +80,7 @@ const Projects = () => {
         <Carousel
         indicators={false}
         navButtonsAlwaysVisible
+        interval={10000}
          className={`min-w-full sm:px-12 lg:px-20`}>
           {
             Object.keys(ProjectsList).map(project => {
