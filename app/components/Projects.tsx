@@ -58,7 +58,7 @@ return (
     </div>
     <div className='flex gap-4 text-gray-400 mt-2 md:-mt-4 lg:mt-0'>
         <a href={github}  target="_blank" rel='noreferrer'>
-        { github?.length !== undefined && <Github></Github>}
+        { github?.length !== undefined && <Github viewBox="0 0 50 50"></Github>}
         </a>
         <a href={live}  target="_blank" rel='noreferrer'>
         { live?.length !== undefined && <Live></Live>}

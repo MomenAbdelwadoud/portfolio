@@ -14,7 +14,7 @@ const Sidebar = ({asideHandler}:{asideHandler:any}) => {
         <a href="#projects" onClick={asideHandler}>
           <li>Projects</li>
         </a>
-        <a href="#job">
+        <a href="#job" onClick={asideHandler}>
           <li>Job Experience</li>
         </a>
         <a href="#contact" onClick={asideHandler}>

@@ -17,7 +17,8 @@ const staggerDelay = 0.05
 const Header = () => {
   return (
     <header
-     className='py-20 md:py-36 flex flex-col md:items-center lg:relative'>
+     className='py-20 md:py-36 flex flex-col md:items-center lg:relative'
+     id='home'>
     <div>
       <motion.p 
       variants={fadeIn}
