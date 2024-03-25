@@ -1,98 +1,113 @@
-'use client'
-import React, {useState} from 'react'
-import ProjectsList from "../../utils/projects.json"
+"use client";
+import React, {useState} from "react";
+import ProjectsList from "../../utils/projects.json";
 // import ArrowRight from "./svg/arrow-right"
-import Image from 'next/image'
-import Github from './svg/github'
-import Live from './svg/live'
-import {motion} from 'framer-motion'
-import { useMediaQuery } from '@mui/material'
-import Carousel from 'react-material-ui-carousel'
+import Image from "next/image";
+import Github from "./svg/github";
+import Live from "./svg/live";
+import {motion} from "framer-motion";
+import {useMediaQuery} from "@mui/material";
+import Carousel from "react-material-ui-carousel";
 
 type ProjectTypes = {
-  title:string,
-  tools:Array<string>,
-  description:string,
-  imgs:Array<string>,
-  github?:string,
-  live?:string,
-}
+	title: string;
+	tools: Array<string>;
+	description: string;
+	imgs: Array<string>;
+	github?: string;
+	live?: string;
+};
 
-const Project = ({title,tools,description,imgs,github,live}:ProjectTypes) => {
-return (
-  <div className={'px-1 min-h-fit'} > 
-    <div className='flex flex-col md:flex-row md:items-start justify-between'>
-      <div className=' md:w-[60%] md:-mr-20 md:z-30'>
-          <h4 className='text-white uppercase font-medium text-lg lg:text-xl xl:text-2xl'>{title}</h4>
-          <p className='text-secondary text-sm lg:text-lg'>
-              {tools.join(" + ")}
-          </p>
-          <p className='w-full py-4 px-3 md:px-5 md:py-6 text-xs text-black tracking-widest bg-secondary rounded-xl mt-3 mb-4 lg:text-base'>
-              {description}
-          </p>
-      </div>
-              
-      <div className='relative h-44 md:min-w-[50%] lg:scale-x-110 lg:h-52'>
-        <div className='absolute top-0 left-0 z-10'>
-            <Image
-            src={`/projects/${imgs[0]}`}
-            width={200}
-            height={150}
-            alt='project screenshot'
-            className='object-cover border-[1px] rounded-xl opacity-90 border-gray-400'
-            ></Image>
-        </div>
-        <div className='absolute top-1/3 left-1/4 lg:left-1/3 '>
-            <Image
-            src={`/projects/${imgs[1]}`}
-            width={200}
-            height={150}
-            alt='project screenshot'
-            className=' object-cover border-[1px] rounded-xl opacity-90 border-gray-400'
-            ></Image>
-        </div>
-      </div>
-    </div>
-    <div className='flex gap-4 text-gray-400 mt-5 md:-mt-2 lg:mt-2 justify-end mr-14 sm:mr-0 sm:justify-start'>
-        <a href={github}  target="_blank" rel='noreferrer'>
-        { github?.length !== undefined && <Github viewBox="0 0 50 50"></Github>}
-        </a>
-        { live?.length !== undefined && <a href={live}  target="_blank" rel='noreferrer'>
-       <Live></Live>
-        </a>}
-    </div>
-  </div>
-)
-}
-const Projects = () => {  
-  const notPc = useMediaQuery("(max-width: 640px)")
-  const [index, setIndex] = useState("100px")
-  return (
-    <motion.section
-      initial= {{y:30, opacity:0}}
-      whileInView= {{y:0, opacity:1}}
-      viewport={!notPc ? {margin: "-350px"}: {margin:"-100px"}}
-      transition={{delay:0.1}}
-     className='min-h-screen md:min-h-[60vh] lg:min-h-[80vh] flex flex-col justify-center' id='projects'>
-      <h6 className='text-[22px] text-secondary uppercase mb-6 font-medium lg:mb-8'>Projects</h6>
-      <div className='flex items-center gap-1 md:justify-between lg:px-4 lg:gap-3'>
-        {/* <ArrowRight transform="rotate(180,0,-10)" color="#777"></ArrowRight> */}
-        <Carousel
-        indicators={false}
-        navButtonsAlwaysVisible
-        interval={10000}
-         className={`min-w-full sm:px-12 lg:px-20`}>
-          {
-            Object.keys(ProjectsList).map(project => {
-              let cur_project = (ProjectsList as any)[project]
-              return <Project {...cur_project} key={cur_project.id}></Project>
-            })
-          }
-        </Carousel>
-        {/* <ArrowRight color="#fff"></ArrowRight> */}
-      </div>
-    </motion.section>
-  )
-}
+const Project = ({title, tools, description, imgs, github, live}: ProjectTypes) => {
+	return (
+		<div className={"min-h-fit px-1"}>
+			<div className="flex flex-col justify-between md:flex-row md:items-start">
+				<div className=" md:z-30 md:-mr-20 md:w-[60%]">
+					<h4 className="text-lg font-medium uppercase text-white lg:text-xl xl:text-2xl">
+						{title}
+					</h4>
+					<p className="text-sm text-secondary lg:text-lg">
+						{tools.join(" + ")}
+					</p>
+					<p className="mt-3 mb-4 w-full rounded-xl bg-secondary py-4 px-3 text-xs tracking-widest text-black md:px-5 md:py-6 lg:text-base">
+						{description}
+					</p>
+				</div>
 
-export default Projects
+				<div className="relative h-44 md:min-w-[50%] lg:h-52 lg:scale-x-110">
+					<div className="absolute top-0 left-0 z-10">
+						<Image
+							src={`/projects/${imgs[0]}`}
+							width={200}
+							height={150}
+							alt="project screenshot"
+							className="rounded-xl border-[1px] border-gray-400 object-cover opacity-90"></Image>
+					</div>
+					<div className="absolute top-1/3 left-1/4 lg:left-1/3 ">
+						<Image
+							src={`/projects/${imgs[1]}`}
+							width={200}
+							height={150}
+							alt="project screenshot"
+							className=" rounded-xl border-[1px] border-gray-400 object-cover opacity-90"></Image>
+					</div>
+				</div>
+			</div>
+			<div className="mt-5 mr-14 flex justify-end gap-4 text-gray-400 sm:mr-0 sm:justify-start md:-mt-2 lg:mt-2">
+				<a
+					href={github}
+					target="_blank"
+					rel="noreferrer">
+					{github?.length !== undefined && (
+						<Github viewBox="0 0 50 50"></Github>
+					)}
+				</a>
+				{live?.length !== undefined && (
+					<a
+						href={live}
+						target="_blank"
+						rel="noreferrer">
+						<Live></Live>
+					</a>
+				)}
+			</div>
+		</div>
+	);
+};
+const Projects = () => {
+	const notPc = useMediaQuery("(max-width: 640px)");
+	const [index, setIndex] = useState("100px");
+	return (
+		<motion.section
+			initial={{y: 30, opacity: 0}}
+			whileInView={{y: 0, opacity: 1}}
+			viewport={!notPc ? {margin: "-350px"} : {margin: "-100px"}}
+			transition={{delay: 0.1}}
+			className="flex min-h-screen flex-col justify-center md:min-h-[60vh] lg:min-h-[80vh]"
+			id="projects">
+			<h6 className="mb-6 text-[22px] font-medium uppercase text-secondary lg:mb-8">
+				Projects
+			</h6>
+			<div className="flex items-center gap-1 md:justify-between lg:gap-3 lg:px-4">
+				{/* <ArrowRight transform="rotate(180,0,-10)" color="#777"></ArrowRight> */}
+				<Carousel
+					indicators={false}
+					navButtonsAlwaysVisible
+					interval={10000}
+					className={`min-w-full sm:px-12 lg:px-20`}>
+					{Object.keys(ProjectsList).map(project => {
+						let cur_project = (ProjectsList as any)[project];
+						return (
+							<Project
+								{...cur_project}
+								key={cur_project.id}></Project>
+						);
+					})}
+				</Carousel>
+				{/* <ArrowRight color="#fff"></ArrowRight> */}
+			</div>
+		</motion.section>
+	);
+};
+
+export default Projects;
