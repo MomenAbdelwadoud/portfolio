@@ -3,6 +3,7 @@ import {useMediaQuery} from "@mui/material";
 import {motion} from "framer-motion";
 import Github from "./svg/github";
 import Linkedin from "./svg/linkedin";
+import Upwork from "./svg/upwork";
 
 const Contact = () => {
 	const notPc = useMediaQuery("(max-width: 640px)");
@@ -41,6 +42,12 @@ const Contact = () => {
 					target={"_blank"}
 					rel="noreferrer">
 					<Linkedin></Linkedin>
+				</a>
+				<a
+					href="https://www.upwork.com/freelancers/~01a6e07ef1eaafc331"
+					target={"_blank"}
+					rel="noreferrer">
+					<Upwork></Upwork>
 				</a>
 			</div>
 		</motion.section>

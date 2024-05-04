@@ -10,9 +10,9 @@ const Button = () => {
 			transition={{delay: 0.1 * 5}}
 			rel="noreferrer"
 			target={"_blank"}
-			href="https://drive.google.com/file/d/1XOpq-4yH3Dz3bK_l2kPZHGjPp4vedMzS/view?usp=sharing">
+			href="https://www.upwork.com/freelancers/~01a6e07ef1eaafc331">
 			<button className="flex items-center justify-center gap-2 rounded-lg bg-primary py-2 px-5 text-sm font-semibold text-black opacity-80">
-				<p>Open CV</p>
+				<p>Hire me on Upwork</p>
 				<Open></Open>
 			</button>
 		</motion.a>
