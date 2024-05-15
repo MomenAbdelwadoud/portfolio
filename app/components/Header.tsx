@@ -50,7 +50,7 @@ const Header = () => {
 					className="flex gap-2 text-xl font-light tracking-wider md:text-2xl">
 					Iam a{" "}
 					<span className="flex flex-col text-white">
-						<p className="-mb-1 font-bold">Frontend Developer</p>
+						<p className="-mb-1 font-bold">Fullstack Developer</p>
 						<Line></Line>
 					</span>
 				</motion.h2>
