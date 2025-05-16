@@ -85,6 +85,12 @@ const Experience = () => {
 									className="font-mono lg:text-left"
 								/>
 							))}
+							<Tab
+								key={"Your Company"}
+								label="Your Company...?"
+								disabled
+								className="font-mono lg:text-left"
+							/>
 						</Tabs>
 					</Box>
 					{experiences.map((exp, idx) => (
