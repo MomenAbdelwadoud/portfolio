@@ -9,10 +9,9 @@ const About = () => {
 		<motion.section
 			initial={{y: 30, opacity: 0}}
 			whileInView={{y: 0, opacity: 1}}
-			viewport={!notPc ? {margin: "-350px"} : {margin: "-100px"}}
-			// transition={{delay:0.3}}
+			viewport={{once: false, amount: 0.6}}
 			id="about"
-			className="md:min-h-40vh mt-14 flex scroll-mt-40 flex-wrap items-center justify-center gap-4 py-10 font-light md:mt-24 md:justify-between">
+			className=" mt-14 flex scroll-mt-40 flex-wrap items-center justify-center gap-4 py-10 font-light md:mt-24 md:justify-between">
 			<div>
 				<h6 className="-mb-1 text-sm text-secondary lg:text-base">ABOUT</h6>
 				<h3 className="mb-2 text-2xl font-medium tracking-wide lg:text-3xl">
