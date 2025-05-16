@@ -60,9 +60,9 @@ const Experience = () => {
 			<motion.section
 				initial={{y: 30, opacity: 0}}
 				whileInView={{y: 0, opacity: 1}}
-				viewport={isPc ? {margin: "0px 0px 0px -400px"} : {margin: "-100px"}}
+				viewport={isPc ? {margin: "0px 0px 0px -300px"} : {margin: "-100px"}}
 				transition={{delay: 0.3}}
-				className="scroll-mt-56 lg:mt-6"
+				className="md:min-h-60vh mb-10 mt-20 scroll-mt-56 md:mt-10"
 				id="job">
 				<h6 className="mb-6 text-[22px] font-medium uppercase text-secondary lg:mb-10">
 					Job Experience

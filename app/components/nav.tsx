@@ -1,7 +1,7 @@
 "use client";
-import React, {useState} from "react";
-import Sidebar from "./sidebar";
 import {motion} from "framer-motion";
+import {useState} from "react";
+import Sidebar from "./sidebar";
 
 export default function Nav() {
 	const [open, setOpen] = useState(false);
@@ -46,14 +46,14 @@ export default function Nav() {
 					<li>About</li>
 				</a>
 				<a
-					href="#projects"
-					className="transition-colors hover:text-primary">
-					<li>Projects</li>
-				</a>
-				<a
 					href="#job"
 					className="transition-colors hover:text-primary">
 					<li>Job Experience</li>
+				</a>
+				<a
+					href="#projects"
+					className="transition-colors hover:text-primary">
+					<li>Projects</li>
 				</a>
 				<a
 					href="#contact"

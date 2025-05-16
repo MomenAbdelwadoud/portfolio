@@ -73,10 +73,10 @@ const Projects = () => {
 		<motion.section
 			initial={{y: 30, opacity: 0}}
 			whileInView={{y: 0, opacity: 1}}
-			viewport={!notPc ? {margin: "-350px"} : {margin: "-100px"}}
+			viewport={!notPc ? {margin: "-250px"} : {margin: "-100px"}}
 			transition={{delay: 0.1}}
-			className="flex min-h-screen flex-col justify-center md:min-h-[60vh] lg:min-h-[80vh]"
-			id="projects">
+			id="projects"
+			className="mt-16 flex scroll-mt-56 flex-col justify-center py-10 md:mt-24 md:min-h-[60vh] md:scroll-mt-40 lg:mt-20">
 			<h6 className="mb-6 text-[22px] font-medium uppercase text-secondary lg:mb-8">
 				Side Projects
 			</h6>
