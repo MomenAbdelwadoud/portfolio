@@ -16,6 +16,7 @@ export default function ScrollDots() {
 		const handleScroll = () => {
 			let current = "home";
 			for (const section of sections) {
+				// Native js apis are underrated
 				const el = document.getElementById(section.id);
 				if (el) {
 					const rect = el.getBoundingClientRect();
