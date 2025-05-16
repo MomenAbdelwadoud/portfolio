@@ -1,4 +1,3 @@
-import React from "react";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Experience from "./components/experience";
@@ -12,8 +11,8 @@ const Home = () => {
 			<Nav></Nav>
 			<Header></Header>
 			<About></About>
-			<Projects></Projects>
 			<Experience></Experience>
+			<Projects></Projects>
 			<Contact></Contact>
 		</div>
 	);

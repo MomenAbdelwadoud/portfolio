@@ -8,6 +8,7 @@ import {motion} from "framer-motion";
 import Image from "next/image";
 import React from "react";
 import {experiences} from "../../lists/experiences-list";
+import Open from "./svg/new-window";
 
 const theme = createTheme({
 	palette: {
@@ -61,7 +62,7 @@ const Experience = () => {
 				whileInView={{y: 0, opacity: 1}}
 				viewport={isPc ? {margin: "0px 0px 0px -400px"} : {margin: "-100px"}}
 				transition={{delay: 0.3}}
-				className="lg:mt-6"
+				className="scroll-mt-56 lg:mt-6"
 				id="job">
 				<h6 className="mb-6 text-[22px] font-medium uppercase text-secondary lg:mb-10">
 					Job Experience
@@ -81,7 +82,7 @@ const Experience = () => {
 								<Tab
 									key={exp.company}
 									label={exp.company}
-									className="lg:text-left"
+									className="font-mono lg:text-left"
 								/>
 							))}
 						</Tabs>
@@ -93,11 +94,26 @@ const Experience = () => {
 							key={exp.company}>
 							<div className="flex items-center justify-between pr-4 lg:-mt-8 lg:ml-8">
 								<div>
-									<h4 className="text-lg font-semibold tracking-widest text-white md:text-2xl lg:text-3xl">
+									<h2 className="flex items-center text-lg font-semibold tracking-widest text-white md:text-2xl lg:text-3xl">
 										{exp.company}
-									</h4>
+										{exp.link && (
+											<a
+												href={exp.link}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="ml-2 text-xs text-gray-400 md:text-sm lg:text-base">
+												<Open></Open>
+											</a>
+										)}
+									</h2>
 									<p className="text-xs tracking-widest text-gray-300 md:text-base lg:text-lg">
-										{exp.role}
+										{exp.role}{" "}
+										<span className="ml-2 text-[10px] text-gray-400 md:text-xs lg:text-sm">
+											{exp.period}
+										</span>
+									</p>
+									<p className="mt-2 pr-8 text-xs text-gray-300 md:text-sm lg:text-base">
+										{exp.description}
 									</p>
 								</div>
 								<Image

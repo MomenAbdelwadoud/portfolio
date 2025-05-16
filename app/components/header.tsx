@@ -40,7 +40,7 @@ const Header = () => {
 					animate={"visible"}
 					transition={{delay: staggerDelay * 2}}
 					className="mb-3 text-2xl font-medium tracking-wider md:text-3xl lg:text-[2rem]">
-					MOMEN ELKHALIFA
+					MOMEN ABDELWADOUD ELKHALIFA
 				</motion.h1>
 				<motion.h2
 					variants={fadeIn}

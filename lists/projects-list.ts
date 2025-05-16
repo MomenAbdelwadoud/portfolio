@@ -25,15 +25,6 @@ export const projects: Record<string, Project> = {
 		imgs: ["techworks1.png", "techworks2.png"],
 		github: "https://github.com/MomenAbdelwadoud/Techworks-Platform",
 	},
-	iphone: {
-		title: "Iphone 13 Homepage clone",
-		tools: ["HTML/CSS/JS", "GSAP"],
-		description:
-			"A responsive clone to the iphone 13 pro website, it has various animations with GSAP like parallax effect",
-		imgs: ["iphone1.png", "iphone2.png"],
-		github: "https://github.com/MomenAbdelwadoud/JS-Animation-course-projects/tree/master/Iphone13%20homepage",
-		live: "https://iphone13-animations-clone.netlify.app/",
-	},
 	clinic: {
 		title: "Clinic IS dashboard",
 		tools: ["NextJS", "Shadcn", "Pocketbase"],

@@ -78,7 +78,7 @@ const Projects = () => {
 			className="flex min-h-screen flex-col justify-center md:min-h-[60vh] lg:min-h-[80vh]"
 			id="projects">
 			<h6 className="mb-6 text-[22px] font-medium uppercase text-secondary lg:mb-8">
-				Projects
+				Side Projects
 			</h6>
 			<div className="flex items-center gap-1 md:justify-between lg:gap-3 lg:px-4">
 				{/* <ArrowRight transform="rotate(180,0,-10)" color="#777"></ArrowRight> */}
