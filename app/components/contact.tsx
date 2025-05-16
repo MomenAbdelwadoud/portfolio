@@ -13,7 +13,7 @@ const Contact = () => {
 			whileInView={{y: 0, opacity: 1}}
 			// viewport={!notPc ? {margin: "-300px"} : {margin: "-100px"}}
 			transition={{delay: 0.1}}
-			className="mt-24 flex min-h-[30vh] flex-col items-center justify-center"
+			className="mt-24 flex min-h-[40vh] flex-col items-center justify-center"
 			id="contact">
 			<h3 className="mb-2 text-2xl font-medium tracking-wide lg:text-3xl">
 				MOMEN A. ELKHALIFA
