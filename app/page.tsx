@@ -1,23 +1,22 @@
-import React from 'react'
-import About from './components/About'
-import Contact from './components/Contact'
-import Experience from './components/Experience'
-import Header from './components/Header'
-import Nav from './components/Nav'
-import Projects from './components/Projects'
-
+import React from "react";
+import About from "./components/about";
+import Contact from "./components/contact";
+import Experience from "./components/experience";
+import Header from "./components/header";
+import Nav from "./components/nav";
+import Projects from "./components/projects";
 
 const Home = () => {
-  return (
-    <div className='text-white' >
-    <Nav></Nav>
-    <Header></Header>
-    <About></About>
-    <Projects></Projects>
-    <Experience></Experience>
-    <Contact></Contact>
-    </div>
-  )
-}
+	return (
+		<div className="text-white">
+			<Nav></Nav>
+			<Header></Header>
+			<About></About>
+			<Projects></Projects>
+			<Experience></Experience>
+			<Contact></Contact>
+		</div>
+	);
+};
 
-export default Home
+export default Home;

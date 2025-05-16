@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
 import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import {ThemeProvider, createTheme} from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Image from "next/image";
 import {motion} from "framer-motion";
+import Image from "next/image";
+import React from "react";
+import {experiences} from "../../lists/experiences-list";
 
 const theme = createTheme({
 	palette: {
@@ -76,49 +77,48 @@ const Experience = () => {
 							variant="fullWidth"
 							orientation={isPc ? "vertical" : "horizontal"}
 							className="md:flex-col">
-							<Tab
-								label="Bloom (YC W22)"
-								className="lg:text-left"
-							/>
-							<Tab
-								label="...Your company?"
-								disabled
-								className="lg:text-left"
-							/>
+							{experiences.map((exp, idx) => (
+								<Tab
+									key={exp.company}
+									label={exp.company}
+									className="lg:text-left"
+								/>
+							))}
 						</Tabs>
 					</Box>
-					<TabPanel
-						value={value}
-						index={0}>
-						<div className="flex items-center justify-between pr-4 lg:-mt-8 lg:ml-8">
-							<div>
-								<h4 className="text-lg font-semibold tracking-widest text-white md:text-2xl lg:text-3xl">
-									Bloom (YC W22)
-								</h4>
-								<p className="text-xs tracking-widest text-gray-300 md:text-base lg:text-lg">
-									Intern
-								</p>
+					{experiences.map((exp, idx) => (
+						<TabPanel
+							value={value}
+							index={idx}
+							key={exp.company}>
+							<div className="flex items-center justify-between pr-4 lg:-mt-8 lg:ml-8">
+								<div>
+									<h4 className="text-lg font-semibold tracking-widest text-white md:text-2xl lg:text-3xl">
+										{exp.company}
+									</h4>
+									<p className="text-xs tracking-widest text-gray-300 md:text-base lg:text-lg">
+										{exp.role}
+									</p>
+								</div>
+								<Image
+									src={exp.image}
+									height={isTablet ? "60" : isPc ? "80" : "40"}
+									width={isTablet ? "60" : isPc ? "80" : "40"}
+									alt={exp.company}
+									className="rounded-lg opacity-90"
+								/>
 							</div>
-							<Image
-								src={"/Bloom.jpg"}
-								height={isTablet ? "60" : isPc ? "80" : "40"}
-								width={isTablet ? "60" : isPc ? "80" : "40"}
-								alt={`Bloom (YC W22)`}
-								className="rounded-lg opacity-90"></Image>
-						</div>
-						<ul className="space-y-2 py-8 px-4 text-xs md:max-w-[80%] md:space-y-6 md:text-base lg:ml-8 lg:py-10">
-							<li className="list-disc leading-5 tracking-wider">
-								Developed in-house admin dashboards/tools that uses
-								different APIs.
-							</li>
-							<li className="list-disc leading-5 tracking-wider">
-								Designed and built the company{"'"}s Help Center.
-							</li>
-							<li className="list-disc leading-5 tracking-wider">
-								Worked on customer support self-help strategies.
-							</li>
-						</ul>
-					</TabPanel>
+							<ul className="space-y-2 py-8 px-4 text-xs md:max-w-[80%] md:space-y-6 md:text-base lg:ml-8 lg:py-10">
+								{exp.highlights.map((item, i) => (
+									<li
+										key={i}
+										className="list-disc leading-5 tracking-wider">
+										{item}
+									</li>
+								))}
+							</ul>
+						</TabPanel>
+					))}
 				</div>
 			</motion.section>
 		</ThemeProvider>

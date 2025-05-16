@@ -2,7 +2,7 @@
 import {Poppins} from "@next/font/google";
 import {motion} from "framer-motion";
 import Image from "next/image";
-import Button from "./Button";
+import ActionButton from "./action-button";
 import Line from "./svg/line";
 
 const poppins = Poppins({weight: "400", style: "normal", subsets: ["latin"]});
@@ -62,7 +62,7 @@ const Header = () => {
 					className={`font-semibold text-primary ${poppins.className} mb-5 text-sm opacity-70 md:text-xl`}>
 					{"</>"}
 				</motion.p>
-				<Button></Button>
+				<ActionButton></ActionButton>
 				<div>
 					<Image
 						src="./reactjs-icon.svg"

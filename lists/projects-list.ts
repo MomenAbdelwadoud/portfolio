@@ -1,0 +1,45 @@
+export interface Project {
+	title: string;
+	tools: string[];
+	description: string;
+	imgs: string[];
+	github?: string;
+	live?: string;
+}
+
+export const projects: Record<string, Project> = {
+	rock: {
+		title: "Rock Paper Scissors",
+		tools: ["ReactJS", "TailwindCSS"],
+		description:
+			"A simple responsive solution to the Frontend mentor challenge, Rock Paper Scissors web game against PC",
+		imgs: ["rock1.jpg", "rock2.jpg"],
+		github: "https://github.com/MomenAbdelwadoud/Rock-Paper-Scissors-Reactjs",
+		live: "https://rock-paper-scissors-reactjs.pages.dev/",
+	},
+	techworks: {
+		title: "Techworks platform",
+		tools: ["ReactJS", "MUI", "Django"],
+		description:
+			"A platform to manage Techworks boot-camp attendance, schedules, and scoring system. It also has a feature to send bulk emails",
+		imgs: ["techworks1.png", "techworks2.png"],
+		github: "https://github.com/MomenAbdelwadoud/Techworks-Platform",
+	},
+	iphone: {
+		title: "Iphone 13 Homepage clone",
+		tools: ["HTML/CSS/JS", "GSAP"],
+		description:
+			"A responsive clone to the iphone 13 pro website, it has various animations with GSAP like parallax effect",
+		imgs: ["iphone1.png", "iphone2.png"],
+		github: "https://github.com/MomenAbdelwadoud/JS-Animation-course-projects/tree/master/Iphone13%20homepage",
+		live: "https://iphone13-animations-clone.netlify.app/",
+	},
+	clinic: {
+		title: "Clinic IS dashboard",
+		tools: ["NextJS", "Shadcn", "Pocketbase"],
+		description:
+			"A dashboard to manage patients records for doctors, pharmacists, and accountants",
+		imgs: ["clinic1.png", "clinic2.png"],
+		github: "https://github.com/MomenAbdelwadoud/Clinic-IS",
+	},
+};

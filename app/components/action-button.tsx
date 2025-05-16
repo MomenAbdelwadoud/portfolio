@@ -2,7 +2,7 @@
 import {motion} from "framer-motion";
 import Open from "./svg/new-window";
 
-const Button = () => {
+const ActionButton = () => {
 	return (
 		<motion.a
 			initial={{y: 10, opacity: 0}}
@@ -10,13 +10,13 @@ const Button = () => {
 			transition={{delay: 0.1 * 5}}
 			rel="noreferrer"
 			target={"_blank"}
-			href="https://www.upwork.com/freelancers/~01a6e07ef1eaafc331">
+			href="https://github.com/MomenAbdelwadoud/">
 			<button className="flex items-center justify-center gap-2 rounded-lg bg-primary py-2 px-5 text-sm font-semibold text-black opacity-80">
-				<p>Hire me on Upwork</p>
+				<p>View My Github</p>
 				<Open></Open>
 			</button>
 		</motion.a>
 	);
 };
 
-export default Button;
+export default ActionButton;

@@ -1,24 +1,15 @@
 "use client";
-import React, {useState} from "react";
-import ProjectsList from "../../utils/projects.json";
+import {useState} from "react";
+import {Project, projects} from "../../lists/projects-list";
 // import ArrowRight from "./svg/arrow-right"
+import {useMediaQuery} from "@mui/material";
+import {motion} from "framer-motion";
 import Image from "next/image";
+import Carousel from "react-material-ui-carousel";
 import Github from "./svg/github";
 import Live from "./svg/live";
-import {motion} from "framer-motion";
-import {useMediaQuery} from "@mui/material";
-import Carousel from "react-material-ui-carousel";
 
-type ProjectTypes = {
-	title: string;
-	tools: Array<string>;
-	description: string;
-	imgs: Array<string>;
-	github?: string;
-	live?: string;
-};
-
-const Project = ({title, tools, description, imgs, github, live}: ProjectTypes) => {
+const ProjectComponent = ({title, tools, description, imgs, github, live}: Project) => {
 	return (
 		<div className={"min-h-fit px-1"}>
 			<div className="flex flex-col justify-between md:flex-row md:items-start">
@@ -74,6 +65,7 @@ const Project = ({title, tools, description, imgs, github, live}: ProjectTypes) 
 		</div>
 	);
 };
+
 const Projects = () => {
 	const notPc = useMediaQuery("(max-width: 640px)");
 	const [index, setIndex] = useState("100px");
@@ -95,12 +87,13 @@ const Projects = () => {
 					navButtonsAlwaysVisible
 					interval={10000}
 					className={`min-w-full sm:px-12 lg:px-20`}>
-					{Object.keys(ProjectsList).map(project => {
-						let cur_project = (ProjectsList as any)[project];
+					{Object.keys(projects).map(key => {
+						const cur_project = projects[key];
 						return (
-							<Project
+							<ProjectComponent
 								{...cur_project}
-								key={cur_project.id}></Project>
+								key={cur_project.title}
+							/>
 						);
 					})}
 				</Carousel>
