@@ -11,7 +11,7 @@ const Contact = () => {
 		<motion.section
 			initial={{y: 30, opacity: 0}}
 			whileInView={{y: 0, opacity: 1}}
-			viewport={!notPc ? {margin: "-300px"} : {margin: "-100px"}}
+			// viewport={!notPc ? {margin: "-300px"} : {margin: "-100px"}}
 			transition={{delay: 0.1}}
 			className="mt-24 flex min-h-[30vh] flex-col items-center justify-center"
 			id="contact">
