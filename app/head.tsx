@@ -3,6 +3,10 @@ export default function Head() {
 		<>
 			<title>Momen Abdelwadoud Elkhalifa | Fullstack Developer Portfolio</title>
 			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1.0"
+			/>
+			<meta
 				name="description"
 				content="Portfolio of Momen Abdelwadoud Elkhalifa, a fullstack developer skilled in React, Next.js, TypeScript, and modern web technologies. View projects, experience, and contact information."
 			/>
