@@ -1,8 +1,8 @@
 "use client";
 import Box from "@mui/material/Box";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import {ThemeProvider, createTheme} from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {motion} from "framer-motion";
 import Image from "next/image";
@@ -82,7 +82,7 @@ const Experience = () => {
 								<Tab
 									key={exp.company}
 									label={exp.company}
-									className="font-mono lg:text-left"
+									className="items-start font-mono lg:text-left"
 								/>
 							))}
 							<Tab

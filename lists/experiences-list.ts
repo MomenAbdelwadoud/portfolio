@@ -27,6 +27,20 @@ export const experiences: IExperience[] = [
 		link: "https://suhub.healthcare",
 	},
 	{
+		company: "ECG Team",
+		role: "Software Developer",
+		period: "2025 - Present",
+		description:
+			"Contributed to the development and optimization of CardioDi’s ECG management platform for enhanced workflow automation and clinical efficiency.",
+		image: "/experience/ECG.png",
+		highlights: [
+			"Collaborated on ECG systems integrations using DICOM standards, improving interoperability and clinical efficiency.",
+			"Contributed to open source NPM package (ecg-dicom-web-viewer) for parsing and viewing ECG files, enhancing accessibility for developers.",
+			"Worked on admin dashboard for managing ECG data and user interactions.",
+		],
+		link: "https://www.ecg.team",
+	},
+	{
 		company: "Bloom (YC W22)",
 		role: "Intern",
 		period: "2022",
