@@ -18,24 +18,26 @@ const About = () => {
 					MOMEN ABD-ELWADOUD
 				</h3>
 				<p className="max-w-xs py-2 text-sm lg:max-w-md lg:text-base">
-					I am a fullstack developer and undergraduate student, skilled in
-					coding, debugging, and testing to deliver high-quality software. I
-					collaborate with cross-functional teams to design and deploy
-					innovative applications, and actively contribute to code reviews and
-					system improvements.
+					I am skilled at executing daily software development operations
+					involving coding, debugging, and testing, ensuring the delivery of
+					high-quality software solutions. My collaborative approach with
+					cross-functional teams facilitates the design and deployment of
+					innovative applications. I engage in code reviews and I am committed
+					to enhancing the functionality and performance of existing systems or
+					develop new ones.
 				</p>
 				<p className="py-2 text-primary">{"{"}</p>
 				<p className="text-sm">
 					<b className="font-medium">Languages: </b>[TypeScript, JavaScript,
-					Python, Kotlin],
+					Python, Kotlin, Java],
 				</p>
 				<p className="text-sm">
-					<b className="font-medium">Frameworks: </b>[ReactJS, NextJS, Node.js,
-					Express],
+					<b className="font-medium">Frameworks: </b>[ReactJS, NextJS, Tanstack,
+					Node.js, Express, NestJs],
 				</p>
 				<p className="text-sm">
-					<b className="font-medium">Other Tools: </b>[TailwindCSS, Framer
-					Motion, Git, Figma],
+					<b className="font-medium">Other Tools: </b>[Linux, Docker, Git,
+					Figma, Wordpress],
 				</p>
 				<p className="py-2 text-primary">{"}"}</p>
 			</div>

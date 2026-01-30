@@ -28,7 +28,11 @@ export default function Head() {
 			/>
 			<meta
 				property="og:url"
-				content="https://momen.netlify.app"
+				content="https://momen.codes"
+			/>
+			<meta
+				property="og:image"
+				content="https://momen.codes/profile.jpg"
 			/>
 			<meta
 				property="og:site_name"

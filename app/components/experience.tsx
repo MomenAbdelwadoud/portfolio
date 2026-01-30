@@ -134,9 +134,9 @@ const Experience = () => {
 								{exp.highlights.map((item, i) => (
 									<li
 										key={i}
-										className="list-disc leading-5 tracking-wider">
-										{item}
-									</li>
+										className="list-disc leading-5 tracking-wider"
+										dangerouslySetInnerHTML={{__html: item}}
+									/>
 								))}
 							</ul>
 						</TabPanel>
