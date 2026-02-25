@@ -46,5 +46,6 @@ export const projects: Record<string, Project> = {
     description:
       "A Linux GNOME agentic AI extension with command calling features.",
     imgs: ["ai-assistant1.png", "ai-assistant2.png"],
+    github: "https://github.com/MomenAbdelwadoud/linux-simple-ai-assistant",
   },
 };
