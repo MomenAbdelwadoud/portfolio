@@ -40,4 +40,11 @@ export const projects: Record<string, Project> = {
     imgs: ["raed1.png", "raed2.png"],
     live: "https://www.mwahib.org.sa/",
   },
+  aiAssistant: {
+    title: "Simple AI Assistant",
+    tools: ["AI", "Linux", "GNOME"],
+    description:
+      "A Linux GNOME agentic AI extension with command calling features.",
+    imgs: ["ai-assistant1.png", "ai-assistant2.png"],
+  },
 };
