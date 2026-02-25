@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Project, projects } from "../../lists/projects-list";
 // import ArrowRight from "./svg/arrow-right"
-import { useMediaQuery } from "@mui/material";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Carousel from "react-material-ui-carousel";
@@ -67,7 +67,7 @@ const ProjectComponent = ({
           </div>
         </div>
       </div>
-      <div className="mt-5 mr-14 flex justify-end gap-4 text-gray-400 sm:mr-0 sm:justify-start md:-mt-2 lg:mt-2">
+      <div className="mt-14 mr-14 flex justify-end gap-4 text-gray-400 sm:mr-0 sm:justify-start md:-mt-2 lg:mt-2">
         <a
           href={github}
           target="_blank"
