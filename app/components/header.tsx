@@ -14,6 +14,7 @@ const Header = () => {
     >
       <div>
         <p
+          aria-hidden="true"
           className={`animate-fade-in-up font-semibold text-primary ${poppins.className} mb-5 text-sm opacity-70 md:text-xl`}
         >
           {"< >"}
@@ -24,23 +25,40 @@ const Header = () => {
         <h1 className="animate-fade-in-up mb-3 text-2xl font-medium tracking-wider delay-200 md:text-3xl lg:text-[2rem]">
           MOMEN ABDELWADOUD ELKHALIFA
         </h1>
-        <h2 className="animate-fade-in-up flex gap-2 text-xl font-light tracking-wider delay-300 md:text-2xl">
-          Iam a{" "}
+        <p className="animate-fade-in-up mt-0 flex gap-2 text-xl font-light tracking-wider delay-300 md:text-2xl">
+          I&apos;m a{" "}
           <span className="flex flex-col text-white">
-            <p className="-mb-1 font-bold">Fullstack Developer</p>
+            <b className="-mb-1 font-bold">Senior Software Developer</b>
             <Line></Line>
           </span>
-        </h2>
+        </p>
+        <p className="animate-fade-in-up delay-300 mt-4 max-w-md text-sm leading-relaxed text-gray-300 md:text-base">
+          I build full-stack products end to end: the API, the admin the
+          operations team runs on, and the deploys that keep both honest.
+        </p>
         <p
-          className={`animate-fade-in-up delay-400 font-semibold text-primary ${poppins.className} mb-5 text-sm opacity-70 md:text-xl`}
+          aria-hidden="true"
+          className={`animate-fade-in-up delay-400 font-semibold text-primary ${poppins.className} mt-4 mb-5 text-sm opacity-70 md:text-xl`}
         >
           {"</>"}
         </p>
-        <ActionButton></ActionButton>
+        <div className="flex flex-wrap gap-3">
+          <ActionButton
+            href="mailto:me@momen.codes"
+            label="Email me"
+            showIcon={false}
+          ></ActionButton>
+          <ActionButton
+            href="https://github.com/MomenAbdelwadoud/"
+            label="View My Github"
+            variant="outline"
+          ></ActionButton>
+        </div>
         <div>
           <Image
             src="./reactjs-icon.svg"
-            alt="reactjs-icon"
+            alt=""
+            aria-hidden="true"
             width={80}
             height={80}
             className="absolute right-10 bottom-1/2 animate-pulse md:right-0 md:left-10 md:h-[150px] md:w-[150px] lg:left-20 lg:bottom-16"

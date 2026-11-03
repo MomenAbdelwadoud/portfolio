@@ -1,31 +1,24 @@
 "use client";
 
-const Sidebar = ({asideHandler}: {asideHandler: any}) => {
+const links = [
+	{href: "#home", label: "Home"},
+	{href: "#about", label: "About"},
+	{href: "#job", label: "Job Experience"},
+	{href: "#projects", label: "Projects"},
+	{href: "#contact", label: "Contact"},
+];
+
+const Sidebar = ({asideHandler}: {asideHandler: () => void}) => {
 	return (
-		<>
-			<ul className="flex flex-col gap-10 text-lg font-medium text-gray-300">
-				<a
-					href="#home"
-					onClick={asideHandler}>
-					<li>Home</li>
-				</a>
-				<a
-					href="#about"
-					onClick={asideHandler}>
-					<li>About</li>
-				</a>
-				<a
-					href="#job"
-					onClick={asideHandler}>
-					<li>Job Experience</li>
-				</a>
-				<a
-					href="#projects"
-					onClick={asideHandler}>
-					<li>Projects</li>
-				</a>
-			</ul>
-		</>
+		<ul className="flex flex-col gap-10 text-lg font-medium text-gray-300">
+			{links.map(link => (
+				<li key={link.href}>
+					<a href={link.href} onClick={asideHandler}>
+						{link.label}
+					</a>
+				</li>
+			))}
+		</ul>
 	);
 };
 
