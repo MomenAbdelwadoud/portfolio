@@ -33,8 +33,8 @@ const Header = () => {
           </span>
         </p>
         <p className="animate-fade-in-up delay-300 mt-4 max-w-md text-sm leading-relaxed text-gray-300 md:text-base">
-          I build full-stack products end to end: the API, the admin the
-          operations team runs on, and the deploys that keep both honest.
+          I build reliable products end to end—from backend systems and
+          internal tools to the infrastructure that keeps them running.
         </p>
         <p
           aria-hidden="true"

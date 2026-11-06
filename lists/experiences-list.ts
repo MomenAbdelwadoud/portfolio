@@ -20,7 +20,6 @@ export const experiences: IExperience[] = [
 		highlights: [
 			"Designed the <b>delivery orchestration pipeline</b>: <b>BullMQ</b> jobs per delivery window with deterministic job IDs so scheduling is idempotent and restart-safe, plus <b>Google Route Optimization</b> to sequence each driver's stops around time windows and per-order buffers.",
 			"Built the <b>TanStack Start admin platform</b> (118 routes, 38 server-function domains, full <b>Arabic/English</b> i18n) covering inventory, procurement, quality control, stock taking, returns and accounting, with <b>per-page staff permissions</b> and cookie-scoped multi-dark-store access.",
-			"Integrated <b>Zoho Books</b> for order, invoice and purchase-order sync over a <b>BullMQ retry queue</b> with unrecoverable-error classification and explicit ambiguous-match recovery.",
 			"Owned <b>infrastructure and DevOps end to end</b>: <b>Dokploy + Traefik + Backup flow</b> across dev and prod, GitHub Actions shipping SHA-tagged images to a private registry with layer caching, and CI running lint, format and <b>1,300+ unit tests</b> on every PR.",
 			"Set up <b>observability</b>: Sentry across backend and admin, a fingerprint-deduplicated <b>error alert feed</b> that filters third-party provider noise, and ops logging for cancelled, failed and partially delivered orders.",
 		],

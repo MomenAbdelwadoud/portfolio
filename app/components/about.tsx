@@ -25,13 +25,11 @@ const About = () => {
           MOMEN ABD-ELWADOUD
         </h3>
         <p className="max-w-xs py-2 text-sm lg:max-w-md lg:text-base">
-          I&apos;m a senior software developer at Jumla, a quick-commerce
-          delivery platform. I work across the whole thing: the NestJS backend
-          behind orders, inventory, delivery batching and accounting, the
-          TanStack admin the operations team runs the business on, and the
-          deploys that ship it. The work I care most about is the part that has
-          to be right: idempotent jobs, correct money, and pipelines that
-          survive a restart.
+          I&apos;m a senior software developer who builds products across the
+          stack, from backend systems and internal tools to user-facing
+          applications. I&apos;ve worked across e-commerce, healthcare, and
+          fintech, with a focus on solving practical problems and building
+          software that is reliable, maintainable, and useful.
         </p>
         <p aria-hidden="true" className="py-2 text-primary">{"{"}</p>
         <p className="text-sm">
