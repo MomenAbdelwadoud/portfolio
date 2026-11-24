@@ -105,7 +105,7 @@ export default function WordSearch() {
       <div className="ws-eyebrow">ابحث عن الكلمات</div>
       <h1 className="ws-title">العمل المؤسسي</h1>
       <p className="ws-sub">
-        شبكة ١٢ × ١٢ — الكلمات مخبأة أفقياً، عمودياً، قطرياً (أماماً وعكسياً)
+        شبكة ١٢ × ١٢ — الكلمات مخبأة أفقياً من اليمين إلى اليسار، وعمودياً، وقطرياً
       </p>
 
       <div
