@@ -1,4 +1,7 @@
 /* /word-search — cream puzzle card, matches the reference design */
+.ws-page {
+  margin-block: -2.25rem;
+}
 .ws-card {
   --ink: #12312e;
   --teal: #17695f;
@@ -9,33 +12,33 @@
   background: var(--cream);
   border: 1px solid var(--line);
   border-radius: 18px;
-  padding: 2.5rem 2.25rem 1.5rem;
+  padding: 1.9rem 2rem 1.1rem;
   box-shadow: 0 40px 90px -40px rgba(0, 0, 0, .9);
 }
 .ws-eyebrow {
   text-align: center; color: #9a7b3f; font-size: .72rem;
-  letter-spacing: .28em; margin-bottom: 1rem;
+  letter-spacing: .26em; margin-bottom: .55rem;
 }
 .ws-title {
-  text-align: center; color: var(--ink); font-size: clamp(1.9rem, 4vw, 2.7rem);
-  font-weight: 700; line-height: 1.3; margin: 0;
+  text-align: center; color: var(--ink); font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 700; line-height: 1.35; margin: 0;
 }
 .ws-sub {
-  text-align: center; color: #8d8375; font-size: .86rem;
-  margin: .9rem 0 1.6rem; line-height: 1.9;
+  text-align: center; color: #8d8375; font-size: .78rem;
+  margin: .35rem 0 .85rem; line-height: 1.7;
 }
 .ws-grid-wrap {
   background: #f7f1e5; border: 1px solid var(--line);
-  border-radius: 14px; padding: .9rem;
+  border-radius: 14px; padding: .55rem;
 }
 .ws-grid {
   display: grid; grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: .38rem; touch-action: none; user-select: none;
+  gap: .3rem; touch-action: none; user-select: none;
 }
 .ws-cell {
-  aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center;
+  height: clamp(24px, 3.4vh, 42px); display: flex; align-items: center; justify-content: center;
   background: #fff; border: 1px solid #e9e1d2; border-radius: 6px;
-  color: #2c3d3a; font-size: clamp(.9rem, 2.2vw, 1.45rem);
+  color: #2c3d3a; font-size: clamp(.85rem, 1.5vw, 1.15rem);
   font-weight: 600; line-height: 1; cursor: pointer;
   transition: background .12s ease, border-color .12s ease, transform .12s ease;
 }
@@ -49,26 +52,30 @@
   background: #a8d8d0; border-color: #5fa79c;
 }
 .ws-words {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: .6rem; margin-top: 1.6rem;
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: .4rem; margin-top: .9rem;
 }
 @media (max-width: 640px) {
   .ws-card {
-    margin: 0 -.9rem; padding: 1.5rem .8rem 1rem; border-radius: 14px;
+    margin: 0 -.9rem; padding: 1.2rem .7rem .8rem; border-radius: 14px;
   }
-  .ws-grid-wrap { padding: .5rem; }
-  .ws-words { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+  .ws-grid-wrap { padding: .45rem; }
   .ws-grid { gap: .2rem; }
-  .ws-cell { font-size: .95rem; border-radius: 4px; }
-  .ws-sub { font-size: .78rem; }
-  .ws-bar { flex-direction: column; align-items: stretch; gap: .6rem; }
+  .ws-cell { height: auto; aspect-ratio: 1 / 1; font-size: .9rem; border-radius: 4px; }
+  .ws-title { font-size: 1.5rem; }
+  .ws-sub { margin: .2rem 0 .6rem; font-size: .72rem; }
+  .ws-words { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem; margin-top: .7rem; }
+  .ws-chip { padding: .28rem .45rem; font-size: .72rem; }
+  .ws-num { width: 1rem; height: 1rem; font-size: .58rem; }
+  .ws-bar { flex-direction: column; align-items: stretch; gap: .5rem; margin-top: .65rem; }
   .ws-bar > span:last-child { justify-content: space-between; display: flex; }
-  .ws-btn { padding: .45rem .9rem; }
+  .ws-btn { padding: .35rem .8rem; }
+  .ws-rule { margin: .6rem 0 .4rem; }
 }
 .ws-chip {
   display: flex; align-items: center; justify-content: space-between; gap: .5rem;
   background: #fff; border: 1px solid #e9e1d2; border-radius: 8px;
-  padding: .55rem .7rem; font-size: .92rem; color: #2c3d3a;
+  padding: .32rem .55rem; font-size: .8rem; color: #2c3d3a;
 }
 .ws-chip[data-found="true"] {
   background: #eaf5f2; border-color: #a9cec6; color: #0c463f;
@@ -77,34 +84,45 @@
   text-decoration: line-through; text-decoration-color: #7cbcb2;
 }
 .ws-num {
-  flex: none; width: 1.4rem; height: 1.4rem; border-radius: 999px;
-  background: var(--teal); color: #fff; font-size: .78rem; font-weight: 700;
+  flex: none; width: 1.15rem; height: 1.15rem; border-radius: 999px;
+  background: var(--teal); color: #fff; font-size: .64rem; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   font-family: inherit; line-height: 1;
 }
 .ws-chip[data-found="true"] .ws-num { background: #10514a; }
 .ws-bar {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem; margin-top: 1.4rem; font-size: .82rem; color: #8d8375;
+  gap: 1rem; margin-top: .85rem; font-size: .75rem; color: #8d8375;
 }
 .ws-btn {
   border: 1px solid #d9cdb6; background: #fff; color: #4a4235;
-  border-radius: 999px; padding: .35rem .9rem; font-size: .8rem;
+  border-radius: 999px; padding: .25rem .75rem; font-size: .72rem;
   cursor: pointer; white-space: nowrap; transition: background .15s ease;
 }
 .ws-btn:hover { background: #f2ebdc; }
 .ws-rule {
   border: 0; border-top: 1px dashed #ddd2bd;
-  margin: 1.35rem 0 .9rem;
+  margin: .7rem 0 .5rem;
 }
 .ws-foot {
   display: flex; justify-content: space-between;
-  font-size: .72rem; color: #a49a89;
+  font-size: .65rem; color: #a49a89;
 }
 .ws-win {
-  margin-top: 1.1rem; text-align: center; font-size: .95rem;
+  margin-top: .7rem; text-align: center; font-size: .85rem;
   color: #10514a; background: #dff0eb; border: 1px solid #a9cec6;
   border-radius: 10px; padding: .6rem;
+}
+/* short viewports (small laptops): compress the card so the board stays whole */
+@media (max-height: 760px) {
+  .ws-card { padding: 1.3rem 1.8rem .75rem; }
+  .ws-eyebrow { font-size: .62rem; margin-bottom: .3rem; }
+  .ws-title { font-size: 1.45rem; }
+  .ws-sub { margin: .2rem 0 .6rem; font-size: .72rem; }
+  .ws-cell { height: clamp(21px, 2.9vh, 32px); }
+  .ws-words { margin-top: .65rem; }
+  .ws-bar { margin-top: .6rem; }
+  .ws-rule { margin: .6rem 0 .4rem; }
 }
 @keyframes wsShake {
   0%, 100% { transform: translateX(0); }

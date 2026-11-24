@@ -11,7 +11,7 @@ const amiri = Amiri({
 
 export default function WordSearchPage() {
   return (
-    <main className={amiri.variable}>
+    <main className={`${amiri.variable} ws-page`}>
       <WordSearch />
     </main>
   );
