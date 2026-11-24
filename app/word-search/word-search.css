@@ -1,0 +1,114 @@
+/* /word-search — cream puzzle card, matches the reference design */
+.ws-card {
+  --ink: #12312e;
+  --teal: #17695f;
+  --cream: #fbf7ef;
+  --line: #e7dcc9;
+  max-width: 48rem;
+  margin: 0 auto;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 2.5rem 2.25rem 1.5rem;
+  box-shadow: 0 40px 90px -40px rgba(0, 0, 0, .9);
+}
+.ws-eyebrow {
+  text-align: center; color: #9a7b3f; font-size: .72rem;
+  letter-spacing: .28em; margin-bottom: 1rem;
+}
+.ws-title {
+  text-align: center; color: var(--ink); font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 700; line-height: 1.3; margin: 0;
+}
+.ws-sub {
+  text-align: center; color: #8d8375; font-size: .86rem;
+  margin: .9rem 0 1.6rem; line-height: 1.9;
+}
+.ws-grid-wrap {
+  background: #f7f1e5; border: 1px solid var(--line);
+  border-radius: 14px; padding: .9rem;
+}
+.ws-grid {
+  display: grid; grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: .38rem; touch-action: none; user-select: none;
+}
+.ws-cell {
+  aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center;
+  background: #fff; border: 1px solid #e9e1d2; border-radius: 6px;
+  color: #2c3d3a; font-size: clamp(.9rem, 2.2vw, 1.45rem);
+  font-weight: 600; line-height: 1; cursor: pointer;
+  transition: background .12s ease, border-color .12s ease, transform .12s ease;
+}
+.ws-cell[data-active="true"] {
+  background: #fbe6b7; border-color: #cba65f; transform: scale(1.04);
+}
+.ws-cell[data-found="true"] {
+  background: #cfe7e2; border-color: #86bcb3; color: #10514a;
+}
+.ws-cell[data-found="true"][data-active="true"] {
+  background: #a8d8d0; border-color: #5fa79c;
+}
+.ws-words {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .6rem; margin-top: 1.6rem;
+}
+@media (max-width: 640px) {
+  .ws-card {
+    margin: 0 -.9rem; padding: 1.5rem .8rem 1rem; border-radius: 14px;
+  }
+  .ws-grid-wrap { padding: .5rem; }
+  .ws-words { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+  .ws-grid { gap: .2rem; }
+  .ws-cell { font-size: .95rem; border-radius: 4px; }
+  .ws-sub { font-size: .78rem; }
+  .ws-bar { flex-direction: column; align-items: stretch; gap: .6rem; }
+  .ws-bar > span:last-child { justify-content: space-between; display: flex; }
+  .ws-btn { padding: .45rem .9rem; }
+}
+.ws-chip {
+  display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+  background: #fff; border: 1px solid #e9e1d2; border-radius: 8px;
+  padding: .55rem .7rem; font-size: .92rem; color: #2c3d3a;
+}
+.ws-chip[data-found="true"] {
+  background: #eaf5f2; border-color: #a9cec6; color: #0c463f;
+}
+.ws-chip[data-found="true"] > span:first-child {
+  text-decoration: line-through; text-decoration-color: #7cbcb2;
+}
+.ws-num {
+  flex: none; width: 1.4rem; height: 1.4rem; border-radius: 999px;
+  background: var(--teal); color: #fff; font-size: .78rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  font-family: inherit; line-height: 1;
+}
+.ws-chip[data-found="true"] .ws-num { background: #10514a; }
+.ws-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; margin-top: 1.4rem; font-size: .82rem; color: #8d8375;
+}
+.ws-btn {
+  border: 1px solid #d9cdb6; background: #fff; color: #4a4235;
+  border-radius: 999px; padding: .35rem .9rem; font-size: .8rem;
+  cursor: pointer; white-space: nowrap; transition: background .15s ease;
+}
+.ws-btn:hover { background: #f2ebdc; }
+.ws-rule {
+  border: 0; border-top: 1px dashed #ddd2bd;
+  margin: 1.35rem 0 .9rem;
+}
+.ws-foot {
+  display: flex; justify-content: space-between;
+  font-size: .72rem; color: #a49a89;
+}
+.ws-win {
+  margin-top: 1.1rem; text-align: center; font-size: .95rem;
+  color: #10514a; background: #dff0eb; border: 1px solid #a9cec6;
+  border-radius: 10px; padding: .6rem;
+}
+@keyframes wsShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+.ws-shake { animation: wsShake .28s ease-in-out 2; }
